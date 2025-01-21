@@ -1,0 +1,326 @@
+
+.ourmenu{
+    margin-top: 25px;
+}
+
+/* Style for the grid container */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    grid-gap: 20px; /* Space between grid items */
+    max-width: 900px; /* Optional: set a maximum width for the grid */
+    margin: 0 auto; /* Center the grid */
+    position: relative;
+}
+
+/* Style for each image item */
+.image-item {
+    position: relative; /* To allow the button to be positioned relative to this container */
+    width: 100%;
+    height: 200px; /* Set a fixed height for the image grid items */
+}
+
+/* Style for the image inside each grid item */
+.image-item img {
+    width: 100%; /* Make the image fill the grid item */
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the area */
+    border-radius: 8px; /* Optional: rounded corners for the images */
+}
+
+/* Style for the circular button container */
+.button {
+    position: absolute;
+    top: 50%; /* Center it vertically */
+    left: 50%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to ensure it's exactly centered */
+    width: 80px; /* Set the size of the circular button */
+    height: 80px; /* Make the height the same as the width to keep it circular */
+    border-radius: 50%; /* Make it circular */
+    background-color: #FFC107; /* Solid background color for the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0); /* Color of the icon */
+    font-size: 40px; /* Size of the Font Awesome icon */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional: add a shadow for effect */
+    cursor: pointer; /* Make it look clickable */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for the circular button */
+.button:hover {
+    transform: translate(-50%, -50%) scale(1.1); /* Scale up when hovering */
+}
+
+/* Optional: You can also change the icon color on hover */
+.button:hover i {
+    color: #ffffff; /* Change icon color when hovered */
+}
+
+/* selection grid */
+.selection{
+    text-align: center;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+
+   
+}
+.selection-img{
+    width: 200px;
+    height: 200px;
+    
+   
+}
+
+/* product grid */ 
+.horizontal-grid {
+    justify-content: center; 
+    align-items: center; 
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+  }
+  
+  .product-card {
+    width: 250px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-image {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .product-image img {
+    width: 100%;
+    display: block;
+  }
+  
+  .product-image .hover-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .product-image:hover .hover-buttons {
+    opacity: 1;
+  }
+  
+  .hover-buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .hover-buttons .add-to-cart {
+    background-color: #8bc34a;
+    color: #fff;
+  }
+  
+  .hover-buttons .add-to-cart:hover {
+    background-color: #7cb342;
+    transform: scale(1.05);
+  }
+  
+  .hover-buttons .view-product {
+    background-color: #ffeb3b;
+    color: #000;
+  }
+  
+  .hover-buttons .view-product:hover {
+    background-color: #fdd835;
+    transform: scale(1.05);
+  }
+  
+  .product-info {
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .product-info h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .product-info p {
+    font-size: 16px;
+    color: #757575;
+  }
+  .sidegrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    max-width: 120px; 
+  }
+  
+  .sidegrid > .item1 {
+    flex: 1 1 50%; 
+    box-sizing: border-box; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+
+  /* footer */
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .footer > div {
+    flex: 1;
+    margin: 0 15px;
+  }
+  
+  .footer h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer ul li {
+    margin: 5px 0;
+  }
+  
+  .newsletter form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .newsletter input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffd700;
+    color: #000;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  .newsletter button:hover {
+    background-color: #e0c200;
+  }
+  
+  .newsletter p {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+
+/* Lower Footer */
+.lower-footer {
+  display: flex;
+  justify-content: space-between; /* Separate logo-contact and social-icons */
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Logo and Contact Section */
+.logo-contact {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between logo and contact info */
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column; /* Stack contact details vertically */
+  gap: 5px; /* Space between phone and email */
+}
+
+.contact-info p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icons and text */
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px; /* Space between social media icons */
+}
+
+.social-icons .social-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social-icons .social-link:hover {
+  color: #ffd700; /* Highlight on hover */
+}
+
+.nav-right .nav-link{
+  display: flex;
+  justify-content: end;
+}
+
+.footer-seperator{
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+}
