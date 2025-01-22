@@ -325,3 +325,48 @@
   background-color: rgba(255, 255, 255, 0.2);
   width: 100%;
 }
+
+/* second footer */
+.footer2{
+  background-color: #333;
+}
+
+.fa-phone,
+.fa-facebook,
+.fa-instagram,
+.fa-twitter {
+  color: #fff; /* Set the color to white for all icons */
+}
+
+.footer2 {
+  background-color: #333; /* Adjust background color */
+  padding: 20px; /* Adjust padding */
+  color: blanchedalmond; /* Text color */
+}
+
+.footer-content {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  justify-content: space-between; /* Space items horizontally */
+  flex-wrap: wrap; /* Allow wrapping if the screen is too small */
+  gap: 20px; /* Add space between items */
+}
+
+.footer-logo img {
+  height: 70px;
+  width: 70px;
+}
+
+.footer-text {
+  font-size: 16px; /* Adjust font size */
+}
+
+.footer-icons i {
+  margin-right: 10px; /* Add space between icons */
+  font-size: 20px; /* Adjust icon size */
+  cursor: pointer; /* Pointer cursor for icons */
+}
+
+.footer-icons i:hover {
+  color: #ffd700; /* Change color on hover */
+}
