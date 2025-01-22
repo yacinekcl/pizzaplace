@@ -109,3 +109,9 @@
   h1{
     text-align: center;
   }
+
+  #cart-count {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  
