@@ -349,7 +349,7 @@
   align-items: center; /* Vertically center the items */
   justify-content: space-between; /* Space items horizontally */
   flex-wrap: wrap; /* Allow wrapping if the screen is too small */
-  gap: 20px; /* Add space between items */
+  gap: 10px; /* Add space between items */
 }
 
 .footer-logo img {
@@ -370,3 +370,23 @@
 .footer-icons i:hover {
   color: #ffd700; /* Change color on hover */
 }
+
+/* scroll to top button */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f4f80e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #c9cc0c;
+}
+
