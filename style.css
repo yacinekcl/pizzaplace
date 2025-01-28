@@ -415,7 +415,7 @@ label{
             outline: none;
             box-shadow: 0 0 4px burlywood;
         }
-        button{
+       .form button{
 	    background-color: yellow;
             border-radius: 4px;
             border: none;
