@@ -18,3 +18,9 @@ window.onscroll = function() {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' }); 
 }
+
+// dark mode button
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}

@@ -183,11 +183,32 @@
     align-items: center;
   }
 
+  /* dark mode */
+
+  .dark-mode {
+    background-color: rgb(32, 27, 27);
+    color: white;
+  }
+
+  .dark-mode-button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #ffd700;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+
+  }
+
   /* footer */
 
   body {
    
     font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    font-size: 25px;
   }
   
   .footer {
@@ -393,7 +414,7 @@
 
 /* form */
 label{
-	margin-left: 20%;	
+/*	margin-left: 20%;	*/
             font-size: 14px;
             font-weight: bold;
             color: #555555;
@@ -402,8 +423,8 @@ label{
         }
         input{
             width: 60%; 
-            padding: 12px;
-            margin: 8px 0 16px;
+          /*  padding: 12px;
+            margin: 8px 0 16px; */
             margin-top: 5%;
             border: 1px solid #cccccc;
             border-radius: 4px;
@@ -415,19 +436,19 @@ label{
             outline: none;
             box-shadow: 0 0 4px burlywood;
         }
-       .form button{
+       /* .form button{
 	    background-color: yellow;
             border-radius: 4px;
             border: none;
-            background-color: rgb(226, 214, 162)3);
+            background-color: rgb(226, 214, 162);
             width: 120px;
             height: 40px;
             font-weight: 600;
             cursor: pointer;
         }
         button:hover{
-            background-color: burlywood;
-        }
+            background-color: burlywood; 
+        } */
         textarea {
             width: 100%;
             padding: 12px;
@@ -444,3 +465,4 @@ label{
             box-shadow: 0 0 4px burlywood;
         }
 
+        
