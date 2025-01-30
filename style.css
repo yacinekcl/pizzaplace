@@ -240,37 +240,54 @@
     margin: 5px 0;
   }
   
-  .newsletter form {
+  /* newsletter */
+  .newsletter {
+    max-width: 600px; /* Set a maximum width for the newsletter container */
+    margin: 0 auto; /* Center the newsletter container */
+    margin-top: 10px;
+    padding: 20px; /* Add some padding to prevent content from touching the edges */
+    border: 1px solid #ccc; /* Optional: Add a border around the entire newsletter */
+    border-radius: 10px; /* Optional: Add rounded corners to the newsletter container */
+}
+
+.newsletter form {
     display: flex;
     align-items: center;
-  }
-  
-  .newsletter input {
+}
+
+.newsletter input {
     flex: 1;
     padding: 10px;
-    border: none;
+    border: 1px solid #ccc; /* Add a gray border to the input field */
     border-radius: 5px 0 0 5px;
-  }
-  
-  .newsletter button {
-    padding: 5px 10px;
+    outline: none; /* Remove the default focus outline */
+}
+
+.newsletter button {
+    padding: 10px 20px; /* Increase padding for better spacing */
     border: none;
     background-color: #ffd700;
     color: #000;
     font-weight: bold;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
-  }
-  
-  .newsletter button:hover {
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.newsletter button:hover {
     background-color: #e0c200;
-  }
-  
-  .newsletter p {
+}
+
+.newsletter p {
     margin-bottom: 10px;
     font-size: 14px;
-  }
-  
+}
+
+.newsletter h1 {
+    margin-bottom: 15px; /* Add some spacing below the heading */
+}
+   
+  /* footer */
   .footer a {
     text-decoration: none;
     color: #fff;
@@ -443,7 +460,7 @@ label{
 /*	margin-left: 20%;	*/
             font-size: 14px;
             font-weight: bold;
-            color: #555555;
+            
             margin-bottom: 5px;
             display: block;
         }
