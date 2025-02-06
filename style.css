@@ -244,7 +244,7 @@
   .newsletter {
     max-width: 600px; /* Set a maximum width for the newsletter container */
     margin: 0 auto; /* Center the newsletter container */
-    margin-top: 10px;
+    margin-top: 50px;
     padding: 20px; /* Add some padding to prevent content from touching the edges */
     border: 1px solid #ccc; /* Optional: Add a border around the entire newsletter */
     border-radius: 10px; /* Optional: Add rounded corners to the newsletter container */
@@ -508,4 +508,21 @@ label{
             box-shadow: 0 0 4px burlywood;
         }
 
-        
+     .submit-btn {
+        padding: 10px 20px; /* Increase padding for better spacing */
+    border: none;
+    background-color: #ffd700;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5x 5px 5px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+  }
+
+  .seperator{
+    height: 1px;
+  background-color: rgb(54, 48, 48);
+  width: 100%;
+  color: rgb(49, 45, 45);
+  margin: 10px;
+  }

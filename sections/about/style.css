@@ -1,11 +1,32 @@
 body {
-  height: 100%;
+  /* height: 100%; */
     font-family: Arial, sans-serif;
    /* background-color: white; */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
     color: rgb(255, 255, 255);
+    height: 100vh;
     font-size: 25px;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
+
+  /* Mobile Responsive Styles */
+  @media (max-width: 768px) {
+    .content-overlay {
+      padding: 15px;
+  }
+  
+  .content-overlay h1 {
+      font-size: 24px;
+  }
+  
+  .content-overlay p {
+      font-size: 16px;
+  }
+   
+    }
+  
 
   /* Background Image */
 .background-image {
@@ -15,8 +36,10 @@ body {
   width: 100%;
   height: 100%; 
   z-index: -1; 
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  
+  background-size: cover;
+  background-position: center;
 }
 
   .dark-mode-button {
@@ -35,6 +58,7 @@ body {
     margin-top: 25px;
     text-align: center; 
     color: white;
+    width: 100%;
 }
 
 /* Dark Transparent Background */
@@ -42,9 +66,14 @@ body {
   background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
   padding: 20px; /* Add padding inside the overlay */
   border-radius: 10px; /* Optional: Add rounded corners */
-  display: inline-block; /* Ensure the overlay wraps the content */
+  /* display: inline-block;  Ensure the overlay wraps the content */
+  display: block;
+ /* width: 100%; */
   max-width: 1000px; /* Optional: Limit the width of the overlay */
   margin: 0 auto; /* Center the overlay */
+  /* Add word wrapping */
+  word-wrap: break-word;
+  box-sizing: border-box;
 }
 
  
