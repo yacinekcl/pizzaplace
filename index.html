@@ -1,4 +1,4 @@
-<!DOPCTYPE html>
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -41,7 +41,7 @@ crossorigin="anonymous"> -->
           <a class="nav-link" href="#">Pricing</a>
           <a class="nav-link" href="sections/about/about.html">About</a> 
           
-          <button class="btn btn-warning navbar-btn"><i class="fas fa-cart-shopping"></i> Cart</button>
+          <button class="cart-btn btn btn-warning navbar-btn"><i class="fas fa-cart-shopping"></i> Cart</button>
           
         </div>
     </div>
@@ -173,12 +173,13 @@ crossorigin="anonymous"> -->
 </div>  
 <div class="image-grid">
   <div class="image-item">
-      <img src="img/img-grid/salads.jpg" alt="Salads">
+      
       <a href="sections/grid/salads/salads.html">
       <div class="button">
           <i class="fas fa-lemon"></i> </br> <!-- Font Awesome Icon -->          
       </div> </a>
-   
+        <h1 class="image-title">Salads</h1>
+         <img src="img/img-grid/salads.jpg" alt="Salads">
   </div>
   <div class="image-item">
       <img src="img/img-grid/pizzas.jpg" alt="Pizzas">
@@ -186,6 +187,7 @@ crossorigin="anonymous"> -->
         <div class="button">
           <i  class="fas fa-pizza-slice"></i> <!-- Font Awesome Icon -->
       </div> </a>
+      <h1 class="image-title">Pizzas</h1>
   </div>
   <div class="image-item">
       <img src="img/img-grid/burgers.jpg" alt="Burgers">
@@ -193,6 +195,7 @@ crossorigin="anonymous"> -->
       <div class="button">
           <i class="fas fa-hamburger"></i> <!-- Font Awesome Icon -->
       </div> </a>
+      <h1 class="image-title">Burgers</h1>
   </div>
   <div class="image-item">
       <img src="img/img-grid/dessert.jpg" alt="Dessert">
@@ -200,6 +203,7 @@ crossorigin="anonymous"> -->
       <div class="button">
           <i class="fas fa-cake"></i> <!-- Font Awesome Icon -->
       </div> </a>
+      <h1 class="image-title">Dessert</h1>
   </div>
   <div class="image-item">
       <img src="img/img-grid/drinks.jpg" alt="Drinks">
@@ -207,6 +211,7 @@ crossorigin="anonymous"> -->
       <div class="button">
           <i class="fas fa-cocktail"></i> <!-- Font Awesome Icon -->
       </div> </a>
+      <h1 class="image-title">Drinks</h1>
   </div>
   <div class="image-item">
       <img src="img/img-grid/seafood.jpg" alt="Dessert">
@@ -214,6 +219,7 @@ crossorigin="anonymous"> -->
       <div class="button">
           <i class="fas fa-fish"></i> <!-- Font Awesome Icon -->
       </div> </a>
+      <h1 class="image-title">Seafood</h1>
   </div>
 </div>
 
@@ -282,9 +288,9 @@ crossorigin="anonymous"> -->
            
 
 </main>
-<div><h1 style="text-align: center;margin-top: 6px;margin-bottom: 6;">Leave a review</h1></div>
+<div><h1 style="text-align: center;margin-top: 6px;margin-bottom: 6px;">Leave a review</h1></div>
 <!-- form-->
-<form style="margin-top: 5%; text-align: center;">
+<form id="reviewForm" style="margin-top: 10px; text-align: center;">
   <label for="name">Name</label>
   <input type="text" name="name" placeholder="Enter your name" required>
   <br>
@@ -298,6 +304,14 @@ crossorigin="anonymous"> -->
   <textarea style="width: 50%;" id="message" name="textarea" rows="4" placeholder="Write a message" required></textarea> <br>
   <button class="submit-btn"  type="submit">Submit</button>
 </form>
+
+<!-- Reviews/Comments Section 
+<div class="comments-section">
+  <h2>Reviews</h2>
+  <div id="commentsList">
+     
+  </div>
+</div> -->
 
 <!-- <div class="seperator" id="seperator"></div> -->
 

@@ -19,6 +19,18 @@
     width: 100%;
     height: 200px; /* Set a fixed height for the image grid items */
 }
+.image-title {
+  position: absolute;
+  top: 90%; /* vertical position */
+  left: 50%; /* horizontal position */
+  transform: translate(-50%, -50%); /* Centers text */
+  color: white; /* Ensures visibility */
+  background: rgba(0, 0, 0, 0.5); /* Optional background for readability */
+  padding: 5px;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 5px;
+}
 
 /* Style for the image inside each grid item */
 .image-item img {
@@ -200,6 +212,9 @@
     cursor: pointer;
 
   }
+  .dark-mode-button:hover{
+    background-color: #e2c209;
+  }
 
   /* footer */
 
@@ -360,6 +375,10 @@
   justify-content: end;
  
 } */
+
+.cart-btn:hover{
+  background-color: #ecb305;
+}
  /* Ensure the navbar-nav container displays items horizontally */
 .navbar-nav.nav-right {
   display: flex;
@@ -414,7 +433,7 @@
   align-items: center; /* Vertically center the items */
   justify-content: space-between; /* Space items horizontally */
   flex-wrap: wrap; /* Allow wrapping if the screen is too small */
-  gap: 10px; /* Add space between items */
+  gap: 5px; /* Add space between items */
 }
 
 .footer-logo img {
@@ -426,8 +445,10 @@
   font-size: 16px; /* Adjust font size */
 }
 
+
 .footer-icons i {
   margin-right: 10px; /* Add space between icons */
+  margin-left: 5px;
   font-size: 20px; /* Adjust icon size */
   cursor: pointer; /* Pointer cursor for icons */
 }
@@ -441,7 +462,7 @@
   position: fixed;
   bottom: 10px;
   right: 20px;
-  padding: 10px 20px;
+  padding: 5px 15px;
   font-size: 16px;
   background-color: #f4f80e;
   color: white;
@@ -514,10 +535,37 @@ label{
     background-color: #ffd700;
     color: #000;
     font-weight: bold;
-    border-radius: 5x 5px 5px 5px;
+    border-radius: 10px 10px 10px 10px;
     cursor: pointer;
     transition: background-color 0.3s ease; /* Smooth hover transition */
   }
+
+  .submit-btn:hover{
+    background-color: #e0bf03;
+  }
+/* reviews section */
+  .comments-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.comment {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.comment:last-child {
+    border-bottom: none;
+}
+.comment strong {
+    color: #333;
+}
+.comment p {
+    margin: 5px 0;
+}
 
   .seperator{
     height: 1px;
