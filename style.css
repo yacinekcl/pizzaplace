@@ -262,7 +262,8 @@
     margin-top: 50px;
     padding: 20px; /* Add some padding to prevent content from touching the edges */
     border: 1px solid #ccc; /* Optional: Add a border around the entire newsletter */
-    border-radius: 10px; /* Optional: Add rounded corners to the newsletter container */
+    border-radius: 10px; 
+    margin-bottom: 22;
 }
 
 .newsletter form {
