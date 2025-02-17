@@ -263,7 +263,7 @@
     padding: 20px; /* Add some padding to prevent content from touching the edges */
     border: 1px solid #ccc; /* Optional: Add a border around the entire newsletter */
     border-radius: 10px; 
-    margin-bottom: 22;
+    margin-bottom: 22px;
 }
 
 .newsletter form {
@@ -386,6 +386,11 @@
   flex-direction: row; /* Align items horizontally */
   align-items: center; /* Center items vertically */
   gap: 10px; /* Add spacing between items */
+}
+
+.navbar-nav.nav-right a:hover{
+  color: #fc3c3a;
+  transition: color 0.2s;
 }
 
 /* Override Bootstrap's default collapsing behavior for mobile */

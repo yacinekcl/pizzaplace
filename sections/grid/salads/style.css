@@ -115,3 +115,32 @@
     margin-left: 5px;
   }
   
+
+  /* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-expand-lg .navbar-nav.nav-right {
+    flex-direction: row; /* Keep items horizontal on mobile */
+    justify-content: flex-end; /* Align items to the right */
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+  }
+
+  .navbar-nav.nav-right .nav-link,
+  .navbar-nav.nav-right .dark-mode-button,
+  .navbar-nav.nav-right .navbar-btn {
+    flex: 0 0 auto; /* Prevent items from growing or shrinking */
+    text-align: center; /* Center text within each item */
+  }
+}
+
+/* Ensure the navbar-nav container displays items horizontally */
+.navbar-nav.nav-right {
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Add spacing between items */
+}
+
+.navbar-nav.nav-right a:hover{
+  color: #fc3c3a;
+  transition: color 0.2s;
+}
