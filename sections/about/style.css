@@ -11,7 +11,7 @@ body {
     overflow-y: hidden;
   }
 
-  /* Mobile Responsive Styles */
+  /* Mobile Responsive Styles 
   @media (max-width: 768px) {
     .content-overlay {
       padding: 15px;
@@ -25,7 +25,7 @@ body {
       font-size: 16px;
   }
    
-    }
+    } */
   
 
   /* Background Image */
@@ -53,7 +53,7 @@ body {
 
   }
 
-  .main-about {
+  /* .main-about {
     z-index: 1;
     margin-top: 25px;
     text-align: center; 
@@ -61,17 +61,17 @@ body {
     width: 100%;
 }
 
-/* Dark Transparent Background */
+
 .content-overlay {
-  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
-  padding: 20px; /* Add padding inside the overlay */
-  border-radius: 10px; /* Optional: Add rounded corners */
-  /* display: inline-block;  Ensure the overlay wraps the content */
+  background-color: rgba(0, 0, 0, 0.6); 
+  padding: 20px; 
+  border-radius: 10px; 
+ 
   display: block;
- /* width: 100%; */
-  max-width: 1000px; /* Optional: Limit the width of the overlay */
-  margin: 0 auto; /* Center the overlay */
-  /* Add word wrapping */
+ /* width: 100%; 
+  max-width: 1000px; 
+  margin: 0 auto; 
+ 
   word-wrap: break-word;
   box-sizing: border-box;
 }
@@ -92,8 +92,71 @@ body {
 }
 
 .main-about p {
-  width: 800px; /* Set a fixed width for the paragraphs */
-  margin: 0 auto; /* Center the paragraphs horizontally */
-  text-align: left; /* Align the text inside the paragraphs to the left */
-  padding: 10px 0; /* Add some padding for better spacing */
+  width: 800px; 
+  margin: 0 auto; 
+  text-align: left; 
+  padding: 10px 0; 
+} */
+
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .content-overlay {
+      padding: 15px;
+      width: 90%; /* Control width in mobile view */
+  }
+
+  .content-overlay h1 {
+      font-size: 24px;
+  }
+
+  .content-overlay p {
+      font-size: 16px;
+      width: 100%; /* Make paragraphs full width on mobile */
+      padding: 10px;
+  }
+}
+
+.main-about {
+  z-index: 1;
+  margin-top: 25px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding: 0 15px; /* Add padding to prevent content touching edges */
+  box-sizing: border-box;
+}
+
+/* Dark Transparent Background */
+.content-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  display: block;
+  max-width: 1000px;
+  margin: 0 auto;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+.main-about ul {
+  list-style-position: outside;
+  padding-left: 20px;
+  display: inline-block;
+  text-align: left;
+  max-width: 100%; /* Ensure list doesn't overflow */
+}
+
+.main-about h1, .main-about li {
+  margin: 0;
+  padding: 0;
+}
+
+.main-about p {
+  max-width: 800px; /* Change from fixed width to max-width */
+  width: 100%; /* Make it responsive */
+  margin: 0 auto;
+  text-align: left;
+  padding: 10px 0;
+  box-sizing: border-box;
 }
