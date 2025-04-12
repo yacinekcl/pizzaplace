@@ -1,3 +1,12 @@
+body {
+  background-image: url(../../../paper.jpg);
+  background-color: white;
+  font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+}
+
 /* product grid */ 
 .horizontal-grid {
     justify-content: center; 
@@ -137,4 +146,154 @@
 .navbar-nav.nav-right a:hover{
   color: #fc3c3a;
   transition: color 0.2s;
+}
+/* footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.footer > div {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.footer h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin: 5px 0;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* Lower Footer */
+.lower-footer {
+display: flex;
+justify-content: space-between; /* Separate logo-contact and social-icons */
+align-items: center;
+padding: 10px 0;
+}
+
+/* Logo and Contact Section */
+.logo-contact {
+display: flex;
+align-items: center;
+gap: 20px; /* Space between logo and contact info */
+}
+
+.logo {
+width: 50px;
+height: auto;
+}
+
+.brand-name {
+font-size: 18px;
+font-weight: bold;
+}
+
+.contact-info {
+display: flex;
+flex-direction: column; /* Stack contact details vertically */
+gap: 5px; /* Space between phone and email */
+}
+
+.contact-info p {
+margin: 0;
+display: flex;
+align-items: center;
+gap: 8px; /* Space between icons and text */
+}
+
+/* Social Icons */
+.social-icons {
+display: flex;
+gap: 15px; /* Space between social media icons */
+}
+
+.social-icons .social-link {
+text-decoration: none;
+color: #fff;
+font-size: 18px;
+transition: color 0.3s ease;
+}
+
+.social-icons .social-link:hover {
+color: #ffd700; /* Highlight on hover */
+}
+
+/* second footer */
+
+.footer-seperator{
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* second footer */
+.footer2{
+  background-color: #333;
+}
+
+.fa-phone,
+.fa-facebook,
+.fa-instagram,
+.fa-twitter {
+  color: #fff; /* Set the color to white for all icons */
+}
+
+.footer2 {
+  background-color: #333; /* Adjust background color */
+  padding: 20px; /* Adjust padding */
+  color: blanchedalmond; /* Text color */
+}
+
+.footer-content {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  justify-content: space-between; /* Space items horizontally */
+  flex-wrap: wrap; /* Allow wrapping if the screen is too small */
+  gap: 5px; /* Add space between items */
+}
+
+.footer-logo img {
+  height: 70px;
+  width: 70px;
+}
+
+.footer-text {
+  font-size: 16px; /* Adjust font size */
+}
+
+
+.footer-icons i {
+  margin-right: 10px; /* Add space between icons */
+  margin-left: 5px;
+  font-size: 20px; /* Adjust icon size */
+  cursor: pointer; /* Pointer cursor for icons */
+}
+
+.footer-icons i:hover {
+  color: #ffd700; /* Change color on hover */
 }

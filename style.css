@@ -219,6 +219,8 @@
   /* footer */
 
   body {
+
+    background-image: url(paper.jpg);
    
     font-family: Arial, sans-serif;
     background-color: white;
