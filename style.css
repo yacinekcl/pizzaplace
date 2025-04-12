@@ -419,7 +419,7 @@ background-color: #7cb342;
 
 .footer-seperator{
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(78, 76, 76);
   width: 100%;
   color: rgba(255, 255, 255, 0.2);
 }
