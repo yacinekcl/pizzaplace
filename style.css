@@ -200,6 +200,7 @@
   .dark-mode {
     background-color: rgb(32, 27, 27);
     color: white;
+    background-image: url(paper-dark.png);
   }
 
   .dark-mode-button {
