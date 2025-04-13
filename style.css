@@ -1,4 +1,5 @@
 
+
 .ourmenu{
     margin-top: 25px;
 }
@@ -197,6 +198,7 @@
 
   /* dark mode */
 
+  
   .dark-mode {
     background-color: rgb(32, 27, 27);
     color: white;
@@ -215,6 +217,13 @@
   }
   .dark-mode-button:hover{
     background-color: #e2c209;
+  }
+
+  .login-btn i {
+    color: #000; /* Default icon color (black for light mode) */
+  }
+  .dark-mode .login-btn i {
+    color: #fff; /* White icon in dark mode */
   }
 
   /* footer */
@@ -588,4 +597,11 @@ label{
   width: 100%;
   color: rgb(49, 45, 45);
   margin: 10px;
+  }
+
+
+  /* */
+  .navbar-brand {
+    display: flex;
+    flex-direction: row;
   }
