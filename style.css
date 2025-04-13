@@ -500,11 +500,9 @@ background-color: #7cb342;
   background-color: #c9cc0c;
 }
 
-/* form */
+/* review form */
 
-.review-form {
-  padding: 5px;
-}
+
 
 label {
   font-size: 14px;
@@ -557,6 +555,14 @@ textarea:focus {
 
 .submit-btn:hover {
   background-color: #e0bf03;
+}
+
+/* login form */
+.loginform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
 }
 
 /* reviews section */
