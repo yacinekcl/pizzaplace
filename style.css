@@ -501,72 +501,64 @@ background-color: #7cb342;
 }
 
 /* form */
-label{
-/*	margin-left: 20%;	*/
-            font-size: 14px;
-            font-weight: bold;
-            
-            margin-bottom: 5px;
-            display: block;
-        }
-        input{
-            width: 60%; 
-          /*  padding: 12px;
-            margin: 8px 0 16px; */
-            margin-top: 5%;
-            border: 1px solid #cccccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
-        input:focus{
-            border-color: rgb(221, 193, 157);
-            outline: none;
-            box-shadow: 0 0 4px burlywood;
-        }
-       /* .form button{
-	    background-color: yellow;
-            border-radius: 4px;
-            border: none;
-            background-color: rgb(226, 214, 162);
-            width: 120px;
-            height: 40px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        button:hover{
-            background-color: burlywood; 
-        } */
-        textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0 16px;
-            border: 1px solid #cccccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 16px;
-            resize: vertical;
-        }
-        textarea:focus {
-            border-color: rgb(221, 193, 157);;
-            outline: none;
-            box-shadow: 0 0 4px burlywood;
-        }
 
-     .submit-btn {
-        padding: 10px 20px; /* Increase padding for better spacing */
-    border: none;
-    background-color: #ffd700;
-    color: #000;
-    font-weight: bold;
-    border-radius: 10px 10px 10px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth hover transition */
-  }
+.review-form {
+  padding: 5px;
+}
 
-  .submit-btn:hover{
-    background-color: #e0bf03;
-  }
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input, textarea {
+  width: 60%;
+  margin-top: 5px; /* Adjusted for consistency */
+  margin-bottom: 20px; /* Increased spacing between fields */
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input {
+  padding: 12px; /* Ensure inputs have padding */
+}
+
+input:focus {
+  border-color: rgb(221, 193, 157);
+  outline: none;
+  box-shadow: 0 0 4px burlywood;
+}
+
+textarea {
+  padding: 12px;
+  resize: vertical;
+}
+
+textarea:focus {
+  border-color: rgb(221, 193, 157);
+  outline: none;
+  box-shadow: 0 0 4px burlywood;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffd700;
+  color: #000;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #e0bf03;
+}
+
 /* reviews section */
   .comments-section {
     max-width: 800px;
