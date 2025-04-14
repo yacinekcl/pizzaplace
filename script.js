@@ -34,4 +34,67 @@ function myFunction() {
     navbar.classList.remove("navbar-dark", "bg-dark");
     navbar.classList.add("navbar-light", "bg-light");
   }
+  
 }
+
+// carousel
+const container = document.querySelector('.carousel-container');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicatorsContainer = document.querySelector('.indicators');
+        const leftArrow = document.querySelector('.left-arrow');
+        const rightArrow = document.querySelector('.right-arrow');
+        let currentIndex = 0;
+        let interval;
+
+        // Create indicators
+        slides.forEach((_, index) => {
+            const indicator = document.createElement('span');
+            indicator.classList.add('indicator');
+            indicator.addEventListener('click', () => goToSlide(index));
+            indicatorsContainer.appendChild(indicator);
+        });
+
+        const indicators = document.querySelectorAll('.indicator');
+        indicators[currentIndex].classList.add('active');
+
+        function updateCarousel() {
+            container.style.transform = `translateX(-${currentIndex * 100}%)`;
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+            resetAutoSlide();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCarousel();
+            resetAutoSlide();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+            resetAutoSlide();
+        }
+
+        function startAutoSlide() {
+            interval = setInterval(nextSlide, 3000);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(interval);
+            startAutoSlide();
+        }
+
+        // Arrow event listeners
+        leftArrow.addEventListener('click', prevSlide);
+        rightArrow.addEventListener('click', nextSlide);
+
+        // Start auto-slide
+        startAutoSlide();
+        updateCarousel();
