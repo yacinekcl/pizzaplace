@@ -9,12 +9,14 @@ body {
 
 /* product grid */ 
 .horizontal-grid {
-    justify-content: center; 
-    align-items: center; 
-    display: flex;
-    flex-direction: row;
-    gap: 10px; 
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
   
   .product-card {
     width: 250px;
