@@ -2,7 +2,7 @@ function scrollToMenu() {
     document.getElementById('ourmenu').scrollIntoView({ behavior: 'smooth' });
   }
   
-  // Get the button
+  // scroll to top button
 var mybutton = document.getElementById("scrollToTopBtn");
 
 // When the user scrolls down 100px from the top of the document, show the button
