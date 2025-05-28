@@ -1,6 +1,6 @@
 <?php
 include 'db.php';
-
+include '../../../utils.php';
 
 $sql = "SELECT nom_prd, url_prd, desc_prd, prix_prd FROM `produits` WHERE type_prd = 'Boisson'";
 $result = $conn->query($sql);
@@ -8,13 +8,14 @@ $result = $conn->query($sql);
 echo '<div class="horizontal-grid">';
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
+    $path = '../../../'.convertLinuxPathToWindows(htmlspecialchars($row['url_prd']),'/','\\');
     
 
     echo '
        <div class="horizontal-grid">
         <div class="product-card">
           <div class="product-image">
-            <img src="' . htmlspecialchars($row['url_prd']) . '" alt="' . htmlspecialchars($row["nom_prd"]) . '">
+            <img src="' . $path . '" alt="' . htmlspecialchars($row["nom_prd"]) . '">
             <div class="hover-buttons">
               <button class="add-to-cart">Add to Cart</button>
             </div>

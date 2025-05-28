@@ -8,13 +8,13 @@ $result = $conn->query($sql);
 echo '<div class="horizontal-grid">';
 if ($result->num_rows > 0) {
   while ($row = $result->fetch_assoc()) {
-    $pah = '../../../'.convertLinuxPathToWindows(htmlspecialchars($row['url_prd']),'/','\\');
+    $path = '../../../'.convertLinuxPathToWindows(htmlspecialchars($row['url_prd']),'/','\\');
     // echo $pah;
     echo '
        <div class="horizontal-grid">
         <div class="product-card">
           <div class="product-image">
-            <img src="' . $pah . '" alt="' . htmlspecialchars($row["nom_prd"]) . '">
+            <img src="' . $path . '" alt="' . htmlspecialchars($row["nom_prd"]) . '">
             <div class="hover-buttons">
               <button class="add-to-cart">Add to Cart</button>
             </div>
