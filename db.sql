@@ -33,3 +33,41 @@ INSERT INTO `produits` VALUES
 (NULL, 'Fried Calamari', 'Seafood', 11.0, '2.jpg', 'Golden fried squid rings with sauce'),
 (NULL, 'Garlic Butter Shrimp', 'Seafood', 12.0, '3.jpg', 'Shrimp sautéed in garlic butter'),
 (NULL, 'Fish Tacos', 'Seafood', 10.5, '4.jpg', 'Soft tacos filled with grilled white fish and slaw');
+
+2)
+INSERT INTO `produits` VALUES
+(NULL, 'Mango Smoothie', 'Boisson', 3.5, '5.jpg', 'Blended mango, yogurt, and honey'),
+(NULL, 'Lemonade', 'Boisson', 2.7, '6.jpg', 'Chilled fresh-squeezed lemonade'),
+(NULL, 'Hot Chocolate', 'Boisson', 3.0, '7.jpg', 'Creamy cocoa topped with whipped cream'),
+(NULL, 'Espresso', 'Boisson', 2.2, '8.jpg', 'Strong and rich Italian-style coffee');
+
+INSERT INTO `produits` VALUES
+(NULL, 'Caprese Salad', 'Salade', 7.8, '5.jpg', 'Tomatoes, mozzarella, basil, olive oil'),
+(NULL, 'Chickpea Salad', 'Salade', 7.5, '6.jpg', 'Chickpeas, cucumber, tomato, herbs'),
+(NULL, 'Avocado Salad', 'Salade', 8.2, '7.jpg', 'Avocado, spinach, tomato, lime dressing'),
+(NULL, 'Asian Noodle Salad', 'Salade', 8.0, '8.jpg', 'Rice noodles, veggies, sesame dressing');
+
+INSERT INTO `produits` VALUES
+(NULL, 'Hawaiian Pizza', 'Pizza', 10.2, '5.jpg', 'Ham, pineapple, mozzarella, tomato sauce'),
+(NULL, 'Four Cheese Pizza', 'Pizza', 11.0, '6.jpg', 'Mozzarella, gorgonzola, parmesan, goat cheese'),
+(NULL, 'Spicy Sausage Pizza', 'Pizza', 10.8, '7.jpg', 'Spicy Italian sausage, peppers, red onion'),
+(NULL, 'Mushroom Pizza', 'Pizza', 9.9, '8.jpg', 'Mushrooms, garlic, mozzarella, truffle oil');
+
+INSERT INTO `produits` VALUES
+(NULL, 'Beef Burger', 'Burger', 9.5, '5.jpg', 'Beef patty, cheese, BBQ sauce'),
+(NULL, 'Mushroom Swiss Burger', 'Burger', 9.0, '6.jpg', 'Sautéed mushrooms, Swiss cheese, lettuce'),
+(NULL, 'Spicy Chicken Burger', 'Burger', 8.8, '7.jpg', 'Crispy chicken with spicy mayo and pickles'),
+(NULL, 'Fish Burger', 'Burger', 8.5, '8.jpg', 'Fried fish fillet, tartar sauce, lettuce');
+
+INSERT INTO `produits` VALUES
+(NULL, 'Brownie', 'Dessert', 3.9, '5.jpg', 'Fudgy chocolate brownie with walnuts'),
+(NULL, 'Tiramisu', 'Dessert', 4.8, '6.jpg', 'Layered coffee-flavored Italian dessert'),
+(NULL, 'Creme Brulee', 'Dessert', 5.0, '7.jpg', 'Custard base topped with caramelized sugar'),
+(NULL, 'Banana Split', 'Dessert', 4.5, '8.jpg', 'Banana, ice cream, chocolate syrup, cherries');
+
+INSERT INTO `produits` VALUES
+(NULL, 'Seafood Paella', 'Seafood', 14.0, '5.jpg', 'Spanish rice with shrimp, mussels, and squid'),
+(NULL, 'Crab Cakes', 'Seafood', 13.5, '6.jpg', 'Pan-fried crab patties with aioli sauce'),
+(NULL, 'Lobster Roll', 'Seafood', 15.0, '7.jpg', 'Lobster meat in a buttered toasted bun'),
+(NULL, 'Baked Cod', 'Seafood', 12.8, '8.jpg', 'Seasoned cod fillet baked with herbs');
+

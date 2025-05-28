@@ -9,6 +9,7 @@ body {
 
 
 /* product grid */ 
+/* Grid container */
 .horizontal-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -18,92 +19,98 @@ body {
   margin: 0 auto;
 }
 
-  
-  .product-card {
-    width: 250px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .product-image {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .product-image img {
-    width: 100%;
-    display: block;
-  }
-  
-  .product-image .hover-buttons {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .product-image:hover .hover-buttons {
-    opacity: 1;
-  }
-  
-  .hover-buttons button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  .hover-buttons .add-to-cart {
-    background-color: #8bc34a;
-    color: #fff;
-  }
-  
-  .hover-buttons .add-to-cart:hover {
-    background-color: #7cb342;
-    transform: scale(1.05);
-  }
-  
-  .hover-buttons .view-product {
-    background-color: #ffeb3b;
-    color: #000;
-  }
-  
-  .hover-buttons .view-product:hover {
-    background-color: #fdd835;
-    transform: scale(1.05);
-  }
-  
-  .product-info {
-    text-align: center;
-    padding: 15px;
-  }
-  
-  .product-info h3 {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-  
-  .product-info p {
-    font-size: 16px;
-    color: #757575;
-  }
+/* Product card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures cards are same height if parent allows */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card hover effect */
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image container */
+.product-image {
+  width: 100%;
+  height: 180px; /* fixed height for all images */
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crop and fill nicely */
+  display: block;
+}
+
+/* Hover buttons inside image */
+.product-image .hover-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-image:hover .hover-buttons {
+  opacity: 1;
+}
+
+/* Buttons inside hover */
+.hover-buttons button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.hover-buttons .add-to-cart {
+  background-color: #8bc34a;
+  color: #fff;
+}
+
+.hover-buttons .add-to-cart:hover {
+  background-color: #7cb342;
+  transform: scale(1.05);
+}
+
+/* Product info section */
+.product-info {
+  text-align: center;
+  padding: 15px;
+  flex-grow: 1; /* Fills remaining vertical space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-info h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-info p {
+  font-size: 16px;
+  color: #757575;
+}
+
   .sidegrid {
     display: flex;
     flex-wrap: wrap;

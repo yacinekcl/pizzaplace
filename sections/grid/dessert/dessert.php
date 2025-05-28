@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
           <div class="product-info">
             <h3>' . htmlspecialchars($row["nom_prd"]) . '</h3>
             <p>' . htmlspecialchars($row["desc_prd"]) . '</p>
-            <p>' . number_format($row["prix_prd"], 2) . ' DZD</p>
+            <p class="product-price">' . number_format($row["prix_prd"], 2) . ' DZD</p>
           </div> 
            </div>
             
