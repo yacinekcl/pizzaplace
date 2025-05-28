@@ -1,9 +1,27 @@
 
-
 .ourmenu{
    /* margin-top: 25px; */
 }
 
+/* admin */
+#type_prd {
+  width: 110px;
+}
+
+#addproductbtn {
+  background-color: #e0bf03;
+  width: 15%;
+}
+#addproductbtn:hover {
+  background-color: #ebce2e;
+  cursor: pointer;
+}
+.addproductform {
+  gap: 5px;
+}
+
+
+.addproductform 
 /* Style for the grid container */
 .image-grid {
     display: grid;
@@ -230,7 +248,7 @@
 
   /*main */
   .main-page {
-    background-image: url(paper.jpg);
+    /* background-image: url(paper.jpg); */
   }
   .main-page-dark {
     background-image: url(paper-dark.png);
@@ -238,7 +256,7 @@
 
   body {
 
-    background-image: url(paper.jpg); 
+    /* background-image: url(paper.jpg);  */
    
     font-family: Arial, sans-serif;
     background-color: white;
@@ -574,9 +592,10 @@ textarea:focus {
 
 /* login form */
 .loginform {
+  
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
   padding: 5%;
 }
 
