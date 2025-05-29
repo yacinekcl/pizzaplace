@@ -98,3 +98,12 @@ const container = document.querySelector('.carousel-container');
         // Start auto-slide
         startAutoSlide();
         updateCarousel();
+
+
+        // grid style
+        document.querySelector('.image-grid').style.display = 'grid';
+document.querySelector('.image-grid').style.gridTemplateColumns = 'repeat(3, 1fr)';
+document.querySelector('.image-grid').style.gridGap = '20px';
+document.querySelector('.image-grid').style.maxWidth = '900px';
+document.querySelector('.image-grid').style.margin = '0 auto';
+document.querySelector('.image-grid').style.position = 'relative';
