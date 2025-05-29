@@ -60,33 +60,44 @@ let cartCount = 0;
 // Add click event listeners to all "Add to Cart" buttons
 document.querySelectorAll('.add-to-cart').forEach((button, index) => {
     button.addEventListener('click', () => {
+        console.log("hello");
         const productCard = button.closest('.product-card');
         const name = productCard.querySelector('h3').textContent;
         const priceText = productCard.querySelector('.product-price')?.textContent.trim();
-const price = parseFloat(priceText?.split(' ')[0]);
+        const id = productCard.querySelector('.product-image')?.getAttribute('id');
+        console.log(id);
+
+        const price = parseFloat(priceText?.split(' ')[0]);
 
 
-        
+
         // Check if item already exists in cart
         const existingItem = cart.find(item => item.name === name);
-        
+
         if (existingItem) {
             existingItem.quantity += 1;
             existingItem.totalPrice = existingItem.quantity * existingItem.price;
         } else {
             cart.push({
-                id: index + 1,
+                id: id,
                 name: name,
                 quantity: 1,
                 price: price,
                 totalPrice: price
             });
         }
-        
+
         // Update cart count badge
         cartCount++;
         document.getElementById('cart-count').textContent = cartCount;
-        
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "addtocart.php", true);
+
+        const data = new FormData();
+        data.append("id", id);
+        data.append("qte", quantity);
+
+        xhr.send(data);
         // Update modal table
         updateCartModal();
     });
@@ -95,7 +106,7 @@ const price = parseFloat(priceText?.split(' ')[0]);
 function updateCartModal() {
     const tbody = document.querySelector('.modal-body tbody');
     tbody.innerHTML = '';
-    
+
     cart.forEach(item => {
         const row = document.createElement('tr');
         row.innerHTML = `
@@ -115,7 +126,7 @@ function updateCartModal() {
         `;
         tbody.appendChild(row);
     });
-    
+
     // Add event listeners for quantity buttons and delete buttons
     addQuantityButtonListeners();
 }
@@ -135,7 +146,7 @@ function addQuantityButtonListeners() {
             }
         });
     });
-    
+
     // Decrease quantity
     document.querySelectorAll('.decrease-qty').forEach(button => {
         button.addEventListener('click', (e) => {
@@ -150,7 +161,7 @@ function addQuantityButtonListeners() {
             }
         });
     });
-    
+
     // Delete item
     document.querySelectorAll('.delete-item').forEach(button => {
         button.addEventListener('click', (e) => {
@@ -171,15 +182,15 @@ function myFunction() {
     // Toggle body dark mode
     var body = document.body;
     body.classList.toggle("dark-mode");
-  
+
     // Toggle navbar classes
     var navbar = document.querySelector(".navbar");
     if (navbar.classList.contains("navbar-light")) {
-      navbar.classList.remove("navbar-light", "bg-light");
-      navbar.classList.add("navbar-dark", "bg-dark");
+        navbar.classList.remove("navbar-light", "bg-light");
+        navbar.classList.add("navbar-dark", "bg-dark");
     } else {
-      navbar.classList.remove("navbar-dark", "bg-dark");
-      navbar.classList.add("navbar-light", "bg-light");
+        navbar.classList.remove("navbar-dark", "bg-dark");
+        navbar.classList.add("navbar-light", "bg-light");
     }
-    
-  }
+
+}

@@ -2,7 +2,7 @@
 include 'db.php';
 include '../../../utils.php';
 
-$sql = "SELECT nom_prd, url_prd, desc_prd, prix_prd FROM `produits` WHERE type_prd = 'Dessert'";
+$sql = "SELECT num_prd,nom_prd, url_prd, desc_prd, prix_prd FROM `produits` WHERE type_prd = 'Dessert'";
 $result = $conn->query($sql);
 
 echo '<div class="horizontal-grid">';
@@ -13,7 +13,7 @@ if ($result->num_rows > 0) {
     echo '
        <div class="horizontal-grid">
         <div class="product-card">
-          <div class="product-image">
+          <div class="product-image" id='.$row["num_prd"].'>
             <img src="' . $path . '" alt="' . htmlspecialchars($row["nom_prd"]) . '">
             <div class="hover-buttons">
               <button class="add-to-cart">Add to Cart</button>
