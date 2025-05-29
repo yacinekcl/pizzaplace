@@ -1,6 +1,6 @@
 <?php
 include 'db.php';
-
+include '../../../utils.php';
 
 $sql = "SELECT nom_prd, url_prd, desc_prd, prix_prd FROM `produits` WHERE type_prd = 'Burger'";
 $result = $conn->query($sql);
