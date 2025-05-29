@@ -134,6 +134,8 @@ document.querySelectorAll('.add-to-cart').forEach((button, index) => {
         const data = new FormData();
         data.append("id", id);
         data.append("qte", quantity);
+        data.append("name", name);
+        data.append("price", price)
 
         xhr.send(data);
         // Update modal table

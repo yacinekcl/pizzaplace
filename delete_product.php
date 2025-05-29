@@ -1,32 +1,24 @@
 <?php
 include 'db.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
-    $id = intval($_POST['id']);
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['num_prd'])) {
+    $num_prd = intval($_POST['num_prd']);
 
-    // First get the image path to delete it
-    $stmt = $conn->prepare("SELECT url_prd FROM produits WHERE id = ?");
-    $stmt->bind_param("i", $id);
-    $stmt->execute();
-    $stmt->bind_result($url);
-    $stmt->fetch();
-    $stmt->close();
+    // First delete from child table
+    $conn->query("DELETE FROM ingredientsproduits WHERE num_prd = $num_prd");
 
-    if (!empty($url) && file_exists($url)) {
-        unlink($url); // delete the image file
-    }
+    // Then delete from produits
+    $stmt = $conn->prepare("DELETE FROM produits WHERE num_prd = ?");
+    $stmt->bind_param("i", $num_prd);
 
-    // Now delete the product from DB
-    $stmt = $conn->prepare("DELETE FROM produits WHERE id = ?");
-    $stmt->bind_param("i", $id);
     if ($stmt->execute()) {
         header("Location: admin.php");
-        exit;
+        exit();
     } else {
-        echo "Error deleting product.";
+        echo "Failed to delete product: " . $conn->error;
     }
 
     $stmt->close();
+    $conn->close();
 }
-$conn->close();
 ?>

@@ -1,4 +1,5 @@
 <?php
+include '../../../db.php';
 session_start();
 
 header('Content-Type: application/json');
@@ -20,10 +21,16 @@ if (isset($_POST['id']) && isset($_POST['qte'])) {
     unset($item); // Pour éviter tout bug de référence
 
     if (!$found) {
-        $_SESSION['cart'][] = [
-            'id' => $_POST['id'],
-            'qte' => $_POST['qte']
-        ];
+        $rslt = $conn->query("select prix_prd from produits where num_prd=" . $_POST['id']);
+        if ($rslt->num_rows > 0) {
+            $price=$rslt->fetch_assoc()['prix_prd'];
+            $_SESSION['cart'][] = [
+                'id' => $_POST['id'],
+                'name' => $_POST['name'],
+                'qte' => $_POST['qte'],
+                'price' => $price
+            ];
+        }
     }
 
     echo json_encode([

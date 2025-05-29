@@ -59,7 +59,54 @@
 </div>
 
 <div id="tabs-with-underline-2" class="hidden tabcontent" role="tabpanel" aria-labelledby="tabs-with-underline-item-2">
- <p class="text-gray-500 dark:text-gray-400"> This is the <em class="font-semibold text-gray-800 dark:text-gray-200">second</em> item's tab body. </p>
+ <?php
+include 'db.php';
+
+$typeLabels = [
+    "Salade" => "🥗 Salads",
+    "Pizza" => "🍕 Pizzas",
+    "Burger" => "🍔 Burgers",
+    "Dessert" => "🍰 Desserts",
+    "Boisson" => "🥤 Drinks",
+    "Seafood" => "🦐 Seafood"
+];
+
+// Fetch all products grouped by type
+$productsByType = [];
+$result = $conn->query("SELECT * FROM produits ORDER BY type_prd, nom_prd");
+while ($row = $result->fetch_assoc()) {
+    $productsByType[$row['type_prd']][] = $row;
+}
+?>
+
+<div class="product-list space-y-6">
+    <?php foreach ($typeLabels as $dbType => $label): ?>
+        <?php if (!empty($productsByType[$dbType])): ?>
+            <div>
+                <h2 class="text-2xl font-bold text-indigo-700 mb-4"><?php echo $label; ?></h2>
+                <?php foreach ($productsByType[$dbType] as $product): ?>
+                    <div class="product-item border p-4 mb-3 rounded shadow-sm flex justify-between items-center bg-white">
+                        <div>
+                            <h3 class="text-lg font-semibold"><?php echo htmlspecialchars($product['nom_prd']); ?></h3>
+                            <p class="text-sm text-gray-600"><?php echo number_format($product['prix_prd'], 2); ?> DZD</p>
+                            <p class="text-sm"><?php echo htmlspecialchars($product['desc_prd']); ?></p>
+                        </div>
+                        <form action="delete_product.php" method="post">
+                            <input type="hidden" name="num_prd" value="<?php echo $product['num_prd']; ?>">
+                            <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-semibold py-1 px-3 rounded">
+                                Remove
+                            </button>
+                        </form>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+    <?php endforeach; ?>
+</div>
+
+<?php $conn->close(); ?>
+
+
 </div>
 
 <div id="tabs-with-underline-3" class="hidden tabcontent" role="tabpanel" aria-labelledby="tabs-with-underline-item-3">
