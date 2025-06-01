@@ -4,8 +4,23 @@
 }
 
 /* admin */
+
+#nom_prd{
+  width: 20%;
+}
 #type_prd {
   width: 110px;
+  
+}
+
+#prix_prd{
+  width: 20%;
+}
+#image{
+  width: 30%;
+}
+#desc_prd{
+  width: 20%;
 }
 
 #addproductbtn {
@@ -19,7 +34,7 @@
 .addproductform {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  /* gap: 3px; */
 }
 
 
